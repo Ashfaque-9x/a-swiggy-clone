@@ -5,10 +5,9 @@ metadata:
   labels:
     app: swiggy-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - port: 3000
+  - port: 80
     targetPort: 3000
-    nodePort: 30006
   selector:
     app: swiggy-app
